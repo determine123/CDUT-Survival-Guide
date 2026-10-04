@@ -35,67 +35,87 @@
       "新生入学与第一个月": "start/arrival.md"
     },
     {
-      "培养方案、学分与毕业要求": "study/degree-plan.md"
+      "学习与培养": [
+        {
+          "培养方案、学分与毕业要求": "study/degree-plan.md"
+        },
+        {
+          "选课、绩点与考试复盘": "study/courses.md"
+        },
+        {
+          "转专业：申请前到转入后": "study/change-major.md"
+        },
+        {
+          "电子信息大类分流与方向选择": "study/streaming.md"
+        },
+        {
+          "降级转专业后的毕业规划": "study/graduation.md"
+        },
+        {
+          "人工智能学习：基础与可复现项目": "study/ai.md"
+        },
+        {
+          "科研、竞赛与团队合作": "study/research.md"
+        },
+        {
+          "数学与编程：怎样把基础学扎实": "study/math-programming.md"
+        },
+        {
+          "课程账本与学期计划模板": "study/course-ledger.md"
+        }
+      ]
     },
     {
-      "选课、绩点与考试复盘": "study/courses.md"
+      "校园生活与服务": [
+        {
+          "图书馆、信息检索与数字工具": "life/library.md"
+        },
+        {
+          "住宿、通勤、社团与日常生活": "life/living.md"
+        },
+        {
+          "预算、资助与求助": "life/safety.md"
+        },
+        {
+          "校内事务：找谁、带什么、怎样留记录": "life/services.md"
+        },
+        {
+          "怎样判断经验帖与政策是否可信": "life/information-literacy.md"
+        }
+      ]
     },
     {
-      "转专业：申请前到转入后": "study/change-major.md"
+      "个人经历": [
+        {
+          "determine：2022 成理到 2026 上交": "experience/determine.md"
+        }
+      ]
     },
     {
-      "电子信息大类分流与方向选择": "study/streaming.md"
+      "投稿与共建": [
+        {
+          "投稿与维护": "contribute/index.md"
+        },
+        {
+          "投稿模板": "contribute/templates.md"
+        }
+      ]
     },
     {
-      "降级转专业后的毕业规划": "study/graduation.md"
-    },
-    {
-      "人工智能学习：基础与可复现项目": "study/ai.md"
-    },
-    {
-      "科研、竞赛与团队合作": "study/research.md"
-    },
-    {
-      "图书馆、信息检索与数字工具": "life/library.md"
-    },
-    {
-      "住宿、通勤、社团与日常生活": "life/living.md"
-    },
-    {
-      "预算、资助与求助": "life/safety.md"
-    },
-    {
-      "determine：2022 成理到 2026 上交": "experience/determine.md"
-    },
-    {
-      "数学与编程：怎样把基础学扎实": "study/math-programming.md"
-    },
-    {
-      "课程账本与学期计划模板": "study/course-ledger.md"
-    },
-    {
-      "校内事务：找谁、带什么、怎样留记录": "life/services.md"
-    },
-    {
-      "怎样判断经验帖与政策是否可信": "life/information-literacy.md"
-    },
-    {
-      "官方入口与核查记录": "resources/sources.md"
-    },
-    {
-      "参考与许可说明": "resources/references.md"
-    },
-    {
-      "投稿与维护": "contribute/index.md"
-    },
-    {
-      "投稿模板": "contribute/templates.md"
-    },
-    {
-      "初版范围与待补充内容": "resources/roadmap.md"
-    },
-    {
-      "参考样本入口": "resources/samples.md"
+      "资料与维护": [
+        {
+          "官方入口与核查记录": "resources/sources.md"
+        },
+        {
+          "参考与许可说明": "resources/references.md"
+        },
+        {
+          "初版范围与待补充内容": "resources/roadmap.md"
+        },
+        {
+          "参考样本入口": "resources/samples.md"
+        }
+      ]
     }
   ],
   "extra_css": [
