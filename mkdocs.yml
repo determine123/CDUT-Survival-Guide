@@ -121,5 +121,10 @@
   "extra_css": [
     "stylesheets/extra.css"
   ],
-  "copyright": "原创文档 CC BY 4.0 · 学生共建，非官方文件"
+  "copyright": "原创文档 CC BY 4.0 · 学生共建，非官方文件",
+  "validation": {
+    "links": {
+      "anchors": "warn"
+    }
+  }
 }
