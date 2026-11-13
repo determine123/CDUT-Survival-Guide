@@ -15,10 +15,15 @@ class LinkTests(unittest.TestCase):
             root = Path(directory)
             (root / 'tools').mkdir()
             (root / 'docs').mkdir()
+            (root / 'docs/empty').mkdir()
+            (root / 'docs/landing').mkdir()
+            (root / 'docs/book').mkdir()
+            (root / 'docs/book/index.md').write_text('# Book', encoding='utf-8')
+            (root / 'docs/landing/index.html').write_text('<h1>Landing</h1>', encoding='utf-8')
             shutil.copyfile(ROOT / 'tools/check_links.py', root / 'tools/check_links.py')
             (root / 'docs/index.md').write_text(text, encoding='utf-8')
             (root / 'docs/target.md').write_text('# Target', encoding='utf-8')
-            (root / 'mkdocs.yml').write_text(json.dumps({'nav': [{'Home': 'index.md'}, {'More': [{'Target': 'target.md'}]}]}), encoding='utf-8')
+            (root / 'mkdocs.yml').write_text(json.dumps({'nav': [{'Home': 'index.md'}, {'More': [{'Target': 'target.md'}, {'Book': 'book/index.md'}]}]}), encoding='utf-8')
             return subprocess.run([sys.executable, str(root / 'tools/check_links.py')], capture_output=True, text=True)
 
     def test_optional_link_title(self):
@@ -45,3 +50,16 @@ class LinkTests(unittest.TestCase):
     def test_escaping_path(self):
         result = self.check('[escape](../mkdocs.yml)')
         self.assertNotEqual(result.returncode, 0)
+
+    def test_directory_without_landing_page(self):
+        result = self.check('[Empty directory](empty/)')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('empty/', result.stderr)
+
+    def test_directory_with_html_landing_page(self):
+        result = self.check('[Landing](landing/)')
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_directory_with_markdown_landing_page(self):
+        result = self.check('[Book](book/)')
+        self.assertEqual(result.returncode, 0, result.stderr)

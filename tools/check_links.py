@@ -24,6 +24,7 @@ for page in (root/'docs').rglob('*.md'):
   if not url:continue
   target=(page.parent/unquote(url)).resolve()
   if not target.is_relative_to(root/'docs') or not target.exists():errors.append(f'{page}: {url}')
+  elif target.is_dir() and not any((target/name).is_file() for name in ('index.md','index.html')):errors.append(f'{page}: {url} (directory has no index.md or index.html)')
 config=json.loads((root/'mkdocs.yml').read_text(encoding='utf-8'))
 def nav_pages(items):
  for item in items:
